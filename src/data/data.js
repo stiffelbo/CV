@@ -79,8 +79,12 @@ const courses = [
     school: 'Kodilla',
   },
   {
-    name: 'Web Developer Plus',
-    school: 'Kodilla',
+    name: 'SQL - MySQL for Data Analytics and Business Intelligence',
+    school: 'Udemy',
+  },
+  {
+    name: 'Programowanie w języku Python - od A do Z - 2021',
+    school: 'Udemy',
   },
 ];
 
@@ -148,7 +152,7 @@ const initialStoreData = {
   about: [...about],
   technologies: [...technologies],
   tools: [...tools],
-  courses: {...courses},
+  courses: [...courses],
   education: [...education],
   experience: [...experience],
   languages: [...languages],

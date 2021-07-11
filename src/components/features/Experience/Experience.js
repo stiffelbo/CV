@@ -51,7 +51,7 @@ const Component = (props) => {
 };
 
 Component.propTypes = {
-  experience: PropTypes.object,
+  experience: PropTypes.array,
 };
 
 const mapStateToProps = state => ({

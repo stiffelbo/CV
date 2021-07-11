@@ -12,7 +12,7 @@ import Avatar from '@material-ui/core/Avatar';
 //icons
 import AssignmentIcon from '@material-ui/icons/Assignment';
 
-import styles from './Courses.module.scss';
+//import styles from './Courses.module.scss';
 
 const Component = (props) => {
 
@@ -38,6 +38,12 @@ const Component = (props) => {
             />
           </div>
         </ListItem>
+
+        {props.courses.map(item =>
+          <ListItem key={item.name}>
+            <ListItemText primary={item.name} secondary={item.school}/>
+          </ListItem>
+        )}
       </List>
     </section>
   );

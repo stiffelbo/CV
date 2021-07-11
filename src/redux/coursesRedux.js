@@ -1,5 +1,5 @@
 //selectors
-export const getCourses = ( {courses} ) => courses;
+export const getCourses = ({courses}) => courses;
 
 // reducer
 export default function reducer(statePart = [], action = {}) {

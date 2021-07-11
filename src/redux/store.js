@@ -8,6 +8,7 @@ import interestsRedux from './interestsRedux';
 import languagesRedux from './languagesRedux';
 import technologiesRedux from './technologiesRedux';
 import toolsRedux from './toolsRedux';
+import coursesRedux from './coursesRedux';
 
 
 // define initial state and shallow-merge initial data
@@ -35,6 +36,7 @@ const reducers = {
   languages: languagesRedux,
   technologies: technologiesRedux,
   tools: toolsRedux,
+  courses: coursesRedux,
 };
 
 // add blank reducers for initial state properties without reducers
