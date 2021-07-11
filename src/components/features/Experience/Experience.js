@@ -24,6 +24,12 @@ const Component = (props) => {
     marginBottom: '0.5em',
   };
 
+  const colListItem = {
+    display : 'flex',
+    flexDirection : 'column',
+    alignItems: 'flex-start',
+  };
+
   const avatar = {
     backgroundColor : '#22252c',
   };
@@ -44,9 +50,10 @@ const Component = (props) => {
           </div>
         </ListItem>
         {props.experience.map(item =>
-          <ListItem key={item.years}>
+          <ListItem key={item.years} style={colListItem}>
 
             <ListItemText primary={item.company} secondary={`${item.years} - ${item.role}`}/>
+            {item.summary && item.summary.map((value) => <ListItemText key={value} secondary={value}/>)}
           </ListItem>
         )}
       </List>

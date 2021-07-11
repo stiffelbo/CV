@@ -22,12 +22,12 @@ const Component = (props) => {
   return(
     <List className={styles.root}>
       <ListItem>
-        <Typography variant="h4">
+        <Typography variant="h5">
           {`${name} ${lastname}`}
         </Typography>
       </ListItem>
       <ListItem>
-        <Typography variant="h4" style={occupationStyle}>
+        <Typography variant="h5" style={occupationStyle}>
           {`${occupation}`}
         </Typography>
       </ListItem>

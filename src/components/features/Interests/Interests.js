@@ -27,6 +27,7 @@ const Component = (props) => {
     justifyContent: 'flex-start',
     marginBottom: '0.5em',
   };
+
   return (
     <List>
       <ListItem divider={true}>

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { getCourses } from '../../../redux/coursesRedux';
 
 //Material UI
+
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -12,7 +13,7 @@ import Avatar from '@material-ui/core/Avatar';
 //icons
 import AssignmentIcon from '@material-ui/icons/Assignment';
 
-//import styles from './Courses.module.scss';
+import styles from './Courses.module.scss';
 
 const Component = (props) => {
 
@@ -21,6 +22,12 @@ const Component = (props) => {
     flexDirection : 'row',
     justifyContent: 'flex-start',
     marginBottom: '0.5em',
+  };
+
+  const colListItem = {
+    display : 'flex',
+    flexDirection : 'column',
+    alignItems: 'flex-start',
   };
 
   const avatar = {
@@ -44,8 +51,9 @@ const Component = (props) => {
         </ListItem>
 
         {props.courses.map(item =>
-          <ListItem key={item.name}>
+          <ListItem key={item.name} style={colListItem}>
             <ListItemText primary={item.name} secondary={item.school}/>
+            {item.summary && item.summary.map((value) => <ListItemText key={value} secondary={value}/>)}
           </ListItem>
         )}
       </List>

@@ -36,6 +36,7 @@ const App = () => (
       <Grid container spacing={3}>
         <Grid item xs={3}>
           <Technologies />
+          <Languages />
         </Grid>
         <Grid item xs={6}>
           <Experience />
@@ -44,7 +45,6 @@ const App = () => (
         </Grid>
         <Grid item xs={3}>
           <Courses />
-          <Languages />
           <Interests />
         </Grid>
       </Grid>

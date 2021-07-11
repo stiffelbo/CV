@@ -18,18 +18,6 @@ import BuildIcon from '@material-ui/icons/Build';
 //import styles from './Technologies.module.scss';
 
 const Component = props =>{
-  const colListItem = {
-    display : 'flex',
-    flexDirection : 'column',
-    alignItems: 'flex-start',
-  };
-
-  const rowItem = {
-    display : 'flex',
-    flexDirection : 'row',
-    justifyContent: 'flex-start',
-    marginBottom: '0.5em',
-  };
 
   const levelStars = (level) => {
     let stars = {
@@ -44,6 +32,19 @@ const Component = props =>{
       4.5 : <div><StarIcon /><StarIcon /><StarIcon /><StarIcon /><StarHalfIcon /></div>,
     };
     return stars[level];
+  };
+
+  const colListItem = {
+    display : 'flex',
+    flexDirection : 'column',
+    alignItems: 'flex-start',
+  };
+
+  const rowItem = {
+    display : 'flex',
+    flexDirection : 'row',
+    justifyContent: 'flex-start',
+    marginBottom: '0.5em',
   };
 
   const avatar = {

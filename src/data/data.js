@@ -1,7 +1,7 @@
 const personal = {
   name: 'Jewgienij',
   lastname: 'Brzozowski',
-  image: 'jb.jpg',
+  image: 'jb.png',
   birth : '11-09-1985',
   birthPlace : 'Pietropawłowsk',
   address : 'Starowiejska 18',
@@ -77,14 +77,23 @@ const courses = [
   {
     name: 'Web Developer Plus',
     school: 'Kodilla',
+    summary: [
+      'Poznanie i praktyka technologii z MERN stack.', 'Udział w projekcie grupowym, praktyka Git (branch, konflikty, pr, merge)',
+    ],
   },
   {
     name: 'SQL - MySQL for Data Analytics and Business Intelligence',
     school: 'Udemy',
+    summary: [
+      'Teoria MySQL.', 'Tworzenie baz danych, tabel, kluczy oraz ograniczeń', 'Operacje CRUD wraz z JOIN i agregacją', 'Podstawy funkcji oraz procedur',
+    ],
   },
   {
     name: 'Programowanie w języku Python - od A do Z - 2021',
     school: 'Udemy',
+    summary: [
+      'Pierwszy samodzielny kurs programowania', 'Warunki, pętle, dzialania na listach i słownikach, funkcje', 'Operacje na plikach CSV/XLS',
+    ],
   },
 ];
 
@@ -111,21 +120,33 @@ const experience = [
     years: '2018 - obecnie',
     company: 'Szymon Kurowski Sp z o.o.',
     role: 'Kierownik działu uszlachetnienia monet',
+    summary: [
+      'Analiza procesów produkcyjnych i zarządczych', 'Rozwój apikacji webowej opartej o bazę MySQL, PHP 7 oraz Javascipt', 'Budowa i wdrożenie modułu zbierania danych produkcyjnych oraz kontroli jakości.',
+    ],
   },
   {
     years: '2017 - 2018',
     company: 'Sig Sp z o.o.',
     role: 'Sprzedawca wewnterzny / koordynator',
+    summary: [
+      'Praca na ERP IFS',
+    ],
   },
   {
     years: '2015 - 2017',
     company: 'Kurowski Group Sp z o.o.',
     role: 'Koordynator Projektów',
+    summary: ['Poznanie systemów ASANA oraz JIRA',
+      'Praca w języku Angielskim',
+    ],
   },
   {
     years: '2005 - 2020',
     company: 'Freelance',
     role: 'Dj / Konferansjer',
+    summary: [
+      'Programowanie sterowników oświetlania DMX', 'Obsluga nagłośnień PA',
+    ],
   },
 ];
 
