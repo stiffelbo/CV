@@ -39,6 +39,11 @@ const Component = (props) => {
   const linkAvatar = {
     backgroundColor : '#2b64c7',
   };
+
+  const avatar = {
+    backgroundColor : '#22252c',
+  };
+
   return(
     <>
       <Divider />
@@ -46,7 +51,7 @@ const Component = (props) => {
         <ListItem style={colListItem}>
           <div style={rowItem}>
             <ListItemAvatar>
-              <Avatar>
+              <Avatar style={avatar}>
                 <PhoneAndroidIcon />
               </Avatar>
             </ListItemAvatar>
@@ -56,7 +61,7 @@ const Component = (props) => {
           </div>
           <div style={rowItem}>
             <ListItemAvatar>
-              <Avatar>
+              <Avatar style={avatar}>
                 <MailOutlineIcon />
               </Avatar>
             </ListItemAvatar>
@@ -89,7 +94,7 @@ const Component = (props) => {
         </ListItem>
         <ListItem>
           <ListItemAvatar>
-            <Avatar>
+            <Avatar style={avatar}>
               <HomeIcon />
             </Avatar>
           </ListItemAvatar>

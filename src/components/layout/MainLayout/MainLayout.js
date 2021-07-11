@@ -3,17 +3,32 @@ import PropTypes from 'prop-types';
 import Container from '@material-ui/core/Container';
 import {Footer} from '../Footer/Footer';
 
-const MainLayout = ({children}) => (
-  <div>
-    <main>
-      <Container>
-        {children}
-        <Footer />
-      </Container>
+const MainLayout = ({children}) => {
 
-    </main>
-  </div>
-);
+  const container = {
+    minHeight : '100vh',
+    position: 'relative',
+  };
+
+  const footer = {
+    position : 'absolute',
+    bottom: 0,
+    left: 0,
+    rigth: 0,
+  };
+
+  return (
+    <div>
+      <main>
+        <Container style={container}>
+          {children}
+          <Footer style={footer}/>
+        </Container>
+
+      </main>
+    </div>
+  );
+};
 
 MainLayout.propTypes = {
   children: PropTypes.node,

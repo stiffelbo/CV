@@ -17,6 +17,10 @@ import styles from './Interests.module.scss';
 
 const Component = (props) => {
 
+  const avatar = {
+    backgroundColor : '#22252c',
+  };
+
   const rowItem = {
     display : 'flex',
     flexDirection : 'row',
@@ -28,7 +32,7 @@ const Component = (props) => {
       <ListItem divider={true}>
         <div style={rowItem}>
           <ListItemAvatar>
-            <Avatar>
+            <Avatar style={avatar}>
               <ToysIcon />
             </Avatar>
           </ListItemAvatar>

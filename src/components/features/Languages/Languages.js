@@ -30,12 +30,16 @@ const Component = (props) => {
     marginBottom: '0.5em',
   };
 
+  const avatar = {
+    backgroundColor : '#22252c',
+  };
+
   return (
     <List>
       <ListItem divider={true}>
         <div style={rowItem}>
           <ListItemAvatar>
-            <Avatar>
+            <Avatar style={avatar}>
               <LanguageIcon />
             </Avatar>
           </ListItemAvatar>

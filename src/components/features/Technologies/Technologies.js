@@ -46,13 +46,17 @@ const Component = props =>{
     return stars[level];
   };
 
+  const avatar = {
+    backgroundColor : '#22252c',
+  };
+
   return (
 
     <List>
       <ListItem divider={true}>
         <div style={rowItem}>
           <ListItemAvatar>
-            <Avatar>
+            <Avatar style={avatar}>
               <BuildIcon />
             </Avatar>
           </ListItemAvatar>
