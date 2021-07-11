@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { getEducation } from '../../../redux/educationRedux';
+import { getCourses } from '../../../redux/coursesRedux';
 
 //Material UI
 import List from '@material-ui/core/List';
@@ -10,9 +10,9 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 //icons
-import SchoolIcon from '@material-ui/icons/School';
+import AssignmentIcon from '@material-ui/icons/Assignment';
 
-//import styles from './Education.module.scss';
+import styles from './Courses.module.scss';
 
 const Component = (props) => {
 
@@ -30,38 +30,32 @@ const Component = (props) => {
           <div style={rowItem}>
             <ListItemAvatar>
               <Avatar>
-                <SchoolIcon />
+                <AssignmentIcon />
               </Avatar>
             </ListItemAvatar>
             <ListItemText
-              primary="Wykształcenie"
+              primary="Kursy"
             />
           </div>
         </ListItem>
-        {props.education.map(item =>
-          <ListItem key={item.years}>
-
-            <ListItemText primary={item.school} secondary={`${item.years} - ${item.course}`}/>
-          </ListItem>
-        )}
       </List>
     </section>
   );
 };
 
 Component.propTypes = {
-  education: PropTypes.array,
+  courses: PropTypes.array,
 };
 
 const mapStateToProps = state => ({
-  education: getEducation(state),
+  courses: getCourses(state),
 });
 
 const Container = connect(mapStateToProps, null)(Component);
 
 
 export {
-  //Component as Education,
-  Container as Education,
-  // Component as EducationComponent,
+  //Component as courses,
+  Container as Courses,
+  // Component as coursesComponent,
 };

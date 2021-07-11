@@ -3,5 +3,12 @@
 .root {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+}
+
+.occupation{
+  color: $color-primary;
+  font-style: bold;
 }

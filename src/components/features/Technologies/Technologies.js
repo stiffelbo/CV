@@ -13,7 +13,7 @@ import Avatar from '@material-ui/core/Avatar';
 import StarIcon from '@material-ui/icons/Star';
 import StarHalfIcon from '@material-ui/icons/StarHalf';
 import StarOutlineIcon from '@material-ui/icons/StarOutline';
-import AssignmentIcon from '@material-ui/icons/Assignment';
+import BuildIcon from '@material-ui/icons/Build';
 
 //import styles from './Technologies.module.scss';
 
@@ -53,7 +53,7 @@ const Component = props =>{
         <div style={rowItem}>
           <ListItemAvatar>
             <Avatar>
-              <AssignmentIcon />
+              <BuildIcon />
             </Avatar>
           </ListItemAvatar>
           <ListItemText
@@ -61,10 +61,10 @@ const Component = props =>{
           />
         </div>
       </ListItem>
-      {props.technologies.map(tech => <ListItem key={tech.name} style={colListItem}>
-        <ListItemText primary={tech.name}>
+      {props.technologies.map(item => <ListItem key={item.name} style={colListItem}>
+        <ListItemText primary={item.name}>
         </ListItemText>
-        {levelStars(tech.level)}
+        {levelStars(item.level)}
       </ListItem>)}
     </List>
 

@@ -21,17 +21,10 @@ import { connect } from 'react-redux';
 import { getPersonal } from '../../../redux/personalRedux';
 
 
-//import styles from './Contact.module.scss';
+import styles from './Contact.module.scss';
 
 const Component = (props) => {
-  const {address, city, zip, phone, email, github, linkedIn} = props.personal;
-  const flexContainer = {
-    display: 'flex',
-    flexDirection: 'row',
-  };
-  const linkAvatar = {
-    backgroundColor: '#1976d2',
-  };
+  const {address, city, zip, phone, email, github, linkedIn, relocation} = props.personal;
   const colListItem = {
     display : 'flex',
     flexDirection : 'column',
@@ -43,10 +36,13 @@ const Component = (props) => {
     justifyContent: 'flex-start',
     marginBottom: '0.5em',
   };
+  const linkAvatar = {
+    backgroundColor : '#2b64c7',
+  };
   return(
     <>
       <Divider />
-      <List style={flexContainer}>
+      <List className={styles.root}>
         <ListItem style={colListItem}>
           <div style={rowItem}>
             <ListItemAvatar>
@@ -69,7 +65,7 @@ const Component = (props) => {
             />
           </div>
         </ListItem>
-        <ListItem style={colListItem}>
+        <ListItem className={styles.colListItem}>
           <Link href={github} style={rowItem} color="inherit">
             <ListItemAvatar>
               <Avatar style={linkAvatar}>
@@ -99,7 +95,7 @@ const Component = (props) => {
           </ListItemAvatar>
           <ListItemText
             primary={`${address}, ${city} ${zip}`}
-            secondary={'preferowana praca zdalna lub częsciowo (50/50)'}
+            secondary={relocation}
           />
         </ListItem>
       </List>
@@ -111,7 +107,6 @@ const Component = (props) => {
 Component.propTypes = {
   personal: PropTypes.object,
 };
-
 
 const mapStateToProps = state => ({
   personal: getPersonal(state),

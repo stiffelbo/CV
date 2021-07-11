@@ -5,17 +5,33 @@ import { connect } from 'react-redux';
 import { getPersonal } from '../../../redux/personalRedux';
 
 import Typography from '@material-ui/core/Typography';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 
 import styles from './Personal.module.scss';
 
 const Component = (props) => {
-  console.log(props);
+
+  const occupationStyle = {
+    color: '#2b64c7',
+    fontStyle: 'bold',
+    fontWeight: '800',
+  };
+
   const {name, lastname, occupation} = props.personal;
   return(
-    <div className={styles.root}>
-      <Typography variant="h4" gutterBottom>{name + ' ' + lastname}</Typography>
-      <Typography variant="h4" gutterBottom>{occupation}</Typography>
-    </div>
+    <List className={styles.root}>
+      <ListItem>
+        <Typography variant="h4">
+          {`${name} ${lastname}`}
+        </Typography>
+      </ListItem>
+      <ListItem>
+        <Typography variant="h4" style={occupationStyle}>
+          {`${occupation}`}
+        </Typography>
+      </ListItem>
+    </List>
   );
 };
 

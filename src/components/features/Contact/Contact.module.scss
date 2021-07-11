@@ -1,7 +1,13 @@
 @import '../../../styles/settings.scss';
 
 .root {
-  display: flex;
-  flex-direction: row;
+  @include flexRow;
   justify-content: space-between;
+}
+.colListItem{
+  @include colListItem;
+}
+
+.linkAvatar{
+  background-color: $color-primary;
 }

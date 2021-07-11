@@ -12,6 +12,7 @@ const personal = {
   github: 'https://github.com/stiffelbo',
   linkedIn: 'https://github.com/stiffelbo',
   occupation : 'Junior Web / Java Developer',
+  relocation: 'preferowana praca zdalna lub stacjonarna częsciowo (50/50)',
 };
 
 const about = [
@@ -72,10 +73,16 @@ const tools = [
   },
 ];
 
-const courses = {
-  name: 'Web Developer Plus',
-  school: 'Kodilla',
-};
+const courses = [
+  {
+    name: 'Web Developer Plus',
+    school: 'Kodilla',
+  },
+  {
+    name: 'Web Developer Plus',
+    school: 'Kodilla',
+  },
+];
 
 const education = [
   {
@@ -124,7 +131,7 @@ const languages = [
     level: 'A1',
   },
   {
-    name: 'Russian',
+    name: 'Rosyjski',
     level: 'B2',
   },
 ];
