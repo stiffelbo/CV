@@ -1,5 +1,14 @@
 import {combineReducers, createStore} from 'redux';
 import initialStoreData from '../data/data';
+import personalRedux from './personalRedux';
+import aboutRedux from './aboutRedux';
+import clausuleRedux from './clausuleRedux';
+import educationRedux from './educationRedux';
+import interestsRedux from './interestsRedux';
+import languagesRedux from './languagesRedux';
+import technologiesRedux from './technologiesRedux';
+import toolsRedux from './toolsRedux';
+
 
 // define initial state and shallow-merge initial data
 const initialState = {
@@ -15,7 +24,17 @@ const initialState = {
   clausule: initialStoreData.clausule,
 };
 
+
+
 const reducers = {
+  personal: personalRedux,
+  about: aboutRedux,
+  clausule: clausuleRedux,
+  education: educationRedux,
+  interests: interestsRedux,
+  languages: languagesRedux,
+  technologies: technologiesRedux,
+  tools: toolsRedux,
 };
 
 // add blank reducers for initial state properties without reducers

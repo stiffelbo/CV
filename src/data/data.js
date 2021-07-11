@@ -9,6 +9,8 @@ const personal = {
   zip : '58-533',
   phone : '+48 883 475 410',
   email : 'partygrouppl@gmail.com',
+  github: 'https://github.com/stiffelbo',
+  linkedIn: 'https://github.com/stiffelbo',
   occupation : 'Junior Web / Java Developer',
 };
 
@@ -89,7 +91,7 @@ const education = [
   {
     years: '2000-2004',
     school: 'II L.O. im C.K. Norwida w Jeleniej Górze',
-    course: '',
+    course: 'Informatyka, j. Angielski, Rosyjski',
   },
 ];
 
