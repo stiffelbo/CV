@@ -10,8 +10,8 @@ const personal = {
   phone : '+48 883 475 410',
   email : 'partygrouppl@gmail.com',
   github: 'https://github.com/stiffelbo',
-  linkedIn: 'https://github.com/stiffelbo',
-  occupation : 'Junior Web / Java Developer',
+  linkedIn: 'https://pl.linkedin.com/in/jewgienij-brzozowski-613083147',
+  occupation : 'Junior Web Developer',
   relocation: 'preferowana praca zdalna lub stacjonarna częsciowo (50/50)',
 };
 
@@ -19,44 +19,58 @@ const about = [
   'otwarty na ludzi oraz wiedze', 'konsekwenty', 'umiejący podjąć decyzje', 'nastawiony na ciagłe doskonalenie',
 ];
 
-const technologies = [
-  {
-    name: 'HTML',
-    level: 4,
-  },
-  {
-    name: 'CSS / Sass',
-    level: 4,
-  },
-  {
-    name: 'Javascript / Node JS',
-    level: 3.5,
-  },
-  {
-    name: 'React',
-    level: 3.5,
-  },
-  {
-    name: 'PHP',
-    level: 3,
-  },
-  {
-    name: 'Python',
-    level: 3,
-  },
-  {
-    name: 'Mongo DB',
-    level: 3,
-  },
-  {
-    name: 'MySQL',
-    level: 4,
-  },
-  {
-    name: 'Git',
-    level: 4,
-  },
-];
+const technologies = {
+  displayLevel: false,
+  content :
+    [
+      {
+        name: 'HTML',
+        level: 4,
+      },
+      {
+        name: 'CSS / Sass',
+        level: 4,
+      },
+      {
+        name: 'Javascript / Node JS',
+        level: 3.5,
+      },
+      {
+        name: 'React',
+        level: 3.5,
+      },
+      {
+        name: 'PHP',
+        level: 3,
+      },
+      {
+        name: 'Python',
+        level: 3,
+      },
+      {
+        name: 'Mongo DB',
+        level: 3,
+      },
+      {
+        name: 'MySQL',
+        level: 4,
+      },
+      {
+        name: 'Git',
+        level: 4,
+      },
+      {
+        name: 'ASANA',
+        level: 4,
+      },
+      {
+        name: 'JIRA',
+        level: 4,
+      },
+    ],
+}
+
+;
 
 const tools = [
   {
@@ -76,13 +90,15 @@ const tools = [
 const courses = [
   {
     name: 'Web Developer Plus',
+    years: '2020.11 - 2021.8',
     school: 'Kodilla',
     summary: [
-      'Poznanie i praktyka technologii z MERN stack.', 'Udział w projekcie grupowym, praktyka Git (branch, konflikty, pr, merge)',
+      'Poznanie i praktyka technologii ze stosu MERN', 'Udział w projekcie grupowym, praktyka Git (branch, konflikty, PR, merge)',
     ],
   },
   {
     name: 'SQL - MySQL for Data Analytics and Business Intelligence',
+    years: '2020.7 - 2020.8',
     school: 'Udemy',
     summary: [
       'Teoria MySQL.', 'Tworzenie baz danych, tabel, kluczy oraz ograniczeń', 'Operacje CRUD wraz z JOIN i agregacją', 'Podstawy funkcji oraz procedur',
@@ -90,9 +106,10 @@ const courses = [
   },
   {
     name: 'Programowanie w języku Python - od A do Z - 2021',
+    years: '2019.11 - 2020.2',
     school: 'Udemy',
     summary: [
-      'Pierwszy samodzielny kurs programowania', 'Warunki, pętle, dzialania na listach i słownikach, funkcje', 'Operacje na plikach CSV/XLS',
+      'Pierwszy samodzielny kurs programowania', 'Warunki, pętle, działania na listach i słownikach, funkcje', 'Operacje na plikach CSV/XLS',
     ],
   },
 ];
@@ -127,7 +144,7 @@ const experience = [
   {
     years: '2017 - 2018',
     company: 'Sig Sp z o.o.',
-    role: 'Sprzedawca wewnterzny / koordynator',
+    role: 'Sprzedawca wewnętrzny / koordynator',
     summary: [
       'Praca na ERP IFS',
     ],
@@ -145,7 +162,7 @@ const experience = [
     company: 'Freelance',
     role: 'Dj / Konferansjer',
     summary: [
-      'Programowanie sterowników oświetlania DMX', 'Obsluga nagłośnień PA',
+      'Programowanie sterowników oświetlania DMX', 'Obsługa nagłośnień PA',
     ],
   },
 ];
@@ -153,11 +170,11 @@ const experience = [
 const languages = [
   {
     name: 'Angielski',
-    level: 'A1',
+    level: 'C1',
   },
   {
     name: 'Rosyjski',
-    level: 'B2',
+    level: 'C1',
   },
 ];
 
@@ -171,7 +188,7 @@ const clausule = 'Wyrażam zgodę na przetwarzanie danych osobowych zawartych w 
 const initialStoreData = {
   personal: {...personal},
   about: [...about],
-  technologies: [...technologies],
+  technologies: {...technologies},
   tools: [...tools],
   courses: [...courses],
   education: [...education],

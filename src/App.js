@@ -42,6 +42,7 @@ const App = () => (
           <Experience />
           <Education />
 
+
         </Grid>
         <Grid item xs={3}>
           <Courses />

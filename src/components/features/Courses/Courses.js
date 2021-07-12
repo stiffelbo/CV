@@ -52,7 +52,8 @@ const Component = (props) => {
 
         {props.courses.map(item =>
           <ListItem key={item.name} style={colListItem}>
-            <ListItemText primary={item.name} secondary={item.school}/>
+            <ListItemText primary={`${item.name} - ${item.school}`} />
+            <ListItemText primary={item.years} />
             {item.summary && item.summary.map((value) => <ListItemText key={value} secondary={value}/>)}
           </ListItem>
         )}

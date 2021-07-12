@@ -66,10 +66,10 @@ const Component = props =>{
           />
         </div>
       </ListItem>
-      {props.technologies.map(item => <ListItem key={item.name} style={colListItem}>
+      {props.technologies.content.map(item => <ListItem key={item.name} style={colListItem}>
         <ListItemText primary={item.name}>
         </ListItemText>
-        {levelStars(item.level)}
+        {props.technologies.displayLevel && levelStars(item.level)}
       </ListItem>)}
     </List>
 

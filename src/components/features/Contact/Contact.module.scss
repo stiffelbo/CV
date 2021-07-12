@@ -1,8 +1,7 @@
 @import '../../../styles/settings.scss';
 
 .root {
-  @include flexRow;
-  justify-content: space-between;
+  @include colListItem;
 }
 .colListItem{
   @include colListItem;
@@ -10,4 +9,23 @@
 
 .linkAvatar{
   background-color: $color-primary;
+}
+
+.linkText {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+.cell{
+  display : flex;
+  flex-direction : row;
+  justify-content: flex-start;
+  align-items : center;
+  max-width: 100%;
+  padding-right: 1em;
+}
+
+.avatar {
+  background-color: '#2b64c7';
+  margin-right: 12px;
 }

@@ -2,12 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 //Material UI
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
-import HomeIcon from '@material-ui/icons/Home';
-import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
@@ -16,6 +13,15 @@ import Avatar from '@material-ui/core/Avatar';
 import Divider from '@material-ui/core/Divider';
 import Link from '@material-ui/core/Link';
 
+//Icons
+import HomeIcon from '@material-ui/icons/Home';
+import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import MyLocationIcon from '@material-ui/icons/MyLocation';
+
+
 
 import { connect } from 'react-redux';
 import { getPersonal } from '../../../redux/personalRedux';
@@ -23,19 +29,10 @@ import { getPersonal } from '../../../redux/personalRedux';
 
 import styles from './Contact.module.scss';
 
+
 const Component = (props) => {
-  const {address, city, zip, phone, email, github, linkedIn, relocation} = props.personal;
-  const colListItem = {
-    display : 'flex',
-    flexDirection : 'column',
-    alignItems: 'flex-start',
-  };
-  const rowItem = {
-    display : 'flex',
-    flexDirection : 'row',
-    justifyContent: 'flex-start',
-    marginBottom: '0.5em',
-  };
+  const { city, zip, phone, email, github, linkedIn, relocation} = props.personal;
+
   const linkAvatar = {
     backgroundColor : '#2b64c7',
   };
@@ -46,65 +43,56 @@ const Component = (props) => {
 
   return(
     <>
-      <Divider />
-      <List className={styles.root}>
-        <ListItem style={colListItem}>
-          <div style={rowItem}>
-            <ListItemAvatar>
-              <Avatar style={avatar}>
-                <PhoneAndroidIcon />
-              </Avatar>
-            </ListItemAvatar>
-            <ListItemText
-              primary={phone}
-            />
-          </div>
-          <div style={rowItem}>
-            <ListItemAvatar>
-              <Avatar style={avatar}>
-                <MailOutlineIcon />
-              </Avatar>
-            </ListItemAvatar>
-            <ListItemText
-              primary={email}
-            />
-          </div>
-        </ListItem>
-        <ListItem className={styles.colListItem}>
-          <Link href={github} style={rowItem} color="inherit">
-            <ListItemAvatar>
-              <Avatar style={linkAvatar}>
-                <GitHubIcon />
-              </Avatar>
-            </ListItemAvatar>
-            <ListItemText
-              primary={github}
-            />
-          </Link>
-          <Link href={linkedIn} style={rowItem} color="inherit">
-            <ListItemAvatar>
-              <Avatar style={linkAvatar}>
-                <LinkedInIcon />
-              </Avatar>
-            </ListItemAvatar>
-            <ListItemText
-              primary={linkedIn}
-            />
-          </Link>
-        </ListItem>
-        <ListItem>
-          <ListItemAvatar>
-            <Avatar style={avatar}>
-              <HomeIcon />
+      <Grid container spacing={3}>
+        <Grid item xs={3} className={styles.cell}>
+          <Avatar className={styles.avatar} style={avatar}>
+            <PhoneAndroidIcon />
+          </Avatar>
+          <Typography variant="subtitle1" className={styles.text}>{phone}</Typography>
+        </Grid>
+        <Grid item xs={5} className={styles.cell}>
+
+          <Link href={github} className={styles.cell} color="inherit">
+
+            <Avatar className={styles.avatar} style={linkAvatar}>
+              <GitHubIcon />
             </Avatar>
-          </ListItemAvatar>
-          <ListItemText
-            primary={`${address}, ${city} ${zip}`}
-            secondary={relocation}
-          />
-        </ListItem>
-      </List>
-      <Divider />
+            <Typography variant="body1" className={styles.text}>{github}</Typography>
+          </Link>
+
+        </Grid>
+        <Grid item xs={4} className={styles.cell}>
+          <Avatar className={styles.avatar} style={avatar}>
+            <HomeIcon />
+          </Avatar>
+          <Typography variant="subtitle1" className={styles.text}>{`${zip}, ${city}`}</Typography>
+        </Grid>
+      </Grid>
+      <Grid container spacing={3}>
+        <Grid item xs={3} className={styles.cell}>
+          <Avatar className={styles.avatar} style={avatar}>
+            <MailOutlineIcon />
+          </Avatar>
+          <Typography variant="subtitle1" className={styles.text}>{email}</Typography>
+        </Grid>
+        <Grid item xs={5} className={styles.cell}>
+
+          <Link href={linkedIn} className={styles.cell} color="inherit">
+
+            <Avatar className={styles.avatar} style={linkAvatar}>
+              <LinkedInIcon />
+            </Avatar>
+            <Typography variant="body1" className={styles.text}>{linkedIn}</Typography>
+          </Link>
+
+        </Grid>
+        <Grid item xs={4} className={styles.cell}>
+          <Avatar className={styles.avatar} style={avatar}>
+            <MyLocationIcon />
+          </Avatar>
+          <Typography variant="subtitle1" className={styles.text}>{relocation}</Typography>
+        </Grid>
+      </Grid>
     </>
   );
 };

@@ -18,16 +18,21 @@ const Component = (props) => {
     fontWeight: '800',
   };
 
+  const flexBasis = {
+    flexBasis : '33.3%',
+  };
+
+
   const {name, lastname, occupation} = props.personal;
   return(
-    <List className={styles.root}>
-      <ListItem>
+    <List className={styles.root} >
+      <ListItem style={flexBasis}>
         <Typography variant="h5">
           {`${name} ${lastname}`}
         </Typography>
       </ListItem>
-      <ListItem>
-        <Typography variant="h5" style={occupationStyle}>
+      <ListItem style={flexBasis} >
+        <Typography variant="h5" style={occupationStyle} >
           {`${occupation}`}
         </Typography>
       </ListItem>

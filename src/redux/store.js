@@ -12,20 +12,8 @@ import coursesRedux from './coursesRedux';
 
 
 // define initial state and shallow-merge initial data
-const initialState = {
-  personal: initialStoreData.personal,
-  about: initialStoreData.about,
-  technologies: initialStoreData.technologies,
-  tools: initialStoreData.tools,
-  courses: initialStoreData.courses,
-  education: initialStoreData.education,
-  experience: initialStoreData.experience,
-  languages: initialStoreData.languages,
-  interests: initialStoreData.interests,
-  clausule: initialStoreData.clausule,
-};
 
-
+const initialState = { ...initialStoreData };
 
 const reducers = {
   personal: personalRedux,

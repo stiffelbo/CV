@@ -3,9 +3,17 @@
 .root {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   width: 100%;
   align-items: center;
+}
+
+.listItem{
+  flex-basis: 33.3%;
+}
+
+.occpuationCont{
+  padding-left: 0px;
 }
 
 .occupation{
