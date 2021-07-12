@@ -26,14 +26,14 @@ const App = () => (
         <Grid item xs={3}>
           <Profile />
         </Grid>
-        <Grid item xs={9} >
+        <Grid item xs={9} style={{paddingLeft : '38px'}}>
           <Grid container spacing={3} className={styles.personalData}>
             <Personal />
             <Contact />
           </Grid>
         </Grid>
       </Grid>
-      <Grid container spacing={3}>
+      <Grid container spacing={3} style={{marginTop: '36px'}}>
         <Grid item xs={3}>
           <Technologies />
           <Languages />

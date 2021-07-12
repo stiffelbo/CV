@@ -92,6 +92,7 @@ const courses = [
     name: 'Web Developer Plus',
     years: '2020.11 - 2021.8',
     school: 'Kodilla',
+    link : 'https://kodilla.com/pl/bootcamp/webdeveloper?type=wdp&hr=8&editionId=576#porownanie',
     summary: [
       'Poznanie i praktyka technologii ze stosu MERN', 'Udział w projekcie grupowym, praktyka Git (branch, konflikty, PR, merge)',
     ],
@@ -100,6 +101,7 @@ const courses = [
     name: 'SQL - MySQL for Data Analytics and Business Intelligence',
     years: '2020.7 - 2020.8',
     school: 'Udemy',
+    link : 'https://www.udemy.com/course/sql-mysql-for-data-analytics-and-business-intelligence/',
     summary: [
       'Teoria MySQL.', 'Tworzenie baz danych, tabel, kluczy oraz ograniczeń', 'Operacje CRUD wraz z JOIN i agregacją', 'Podstawy funkcji oraz procedur',
     ],
@@ -108,6 +110,7 @@ const courses = [
     name: 'Programowanie w języku Python - od A do Z - 2021',
     years: '2019.11 - 2020.2',
     school: 'Udemy',
+    link: 'https://www.udemy.com/course/programowanie-w-jezyku-python/',
     summary: [
       'Pierwszy samodzielny kurs programowania', 'Warunki, pętle, działania na listach i słownikach, funkcje', 'Operacje na plikach CSV/XLS',
     ],

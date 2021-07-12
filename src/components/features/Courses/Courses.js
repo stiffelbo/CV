@@ -10,10 +10,11 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
+import Link from '@material-ui/core/Link';
 //icons
 import AssignmentIcon from '@material-ui/icons/Assignment';
 
-import styles from './Courses.module.scss';
+//import styles from './Courses.module.scss';
 
 const Component = (props) => {
 
@@ -34,6 +35,10 @@ const Component = (props) => {
     backgroundColor : '#22252c',
   };
 
+  const link = {
+    color : '#2b64c7',
+  };
+
   return(
     <section>
       <List>
@@ -52,7 +57,9 @@ const Component = (props) => {
 
         {props.courses.map(item =>
           <ListItem key={item.name} style={colListItem}>
-            <ListItemText primary={`${item.name} - ${item.school}`} />
+            <Link href={item.link} style={link}>
+              <ListItemText primary={`${item.name} - ${item.school}`} />
+            </Link>
             <ListItemText primary={item.years} />
             {item.summary && item.summary.map((value) => <ListItemText key={value} secondary={value}/>)}
           </ListItem>
