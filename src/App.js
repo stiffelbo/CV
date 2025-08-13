@@ -9,13 +9,11 @@ import Grid from '@material-ui/core/Grid';
 //components import
 import MainLayout from './components/layout/MainLayout/MainLayout';
 import { Profile } from './components/common/Profile/Profile';
-import { Education } from './components/features/Education/Education';
 import { Courses } from './components/features/Courses/Courses';
 import { Languages } from './components/features/Languages/Languages';
-import { Interests } from './components/features/Interests/Interests';
 import { Personal } from './components/features/Personal/Personal';
 import { Contact } from './components/features/Contact/Contact';
-import { Technologies } from './components/features/Technologies/Technologies';
+import Technologies from './components/features/Technologies/Technologies';
 import { Experience } from './components/features/Experience/Experience';
 
 const App = () => (
@@ -33,25 +31,16 @@ const App = () => (
           </Grid>
         </Grid>
       </Grid>
-      <Grid container spacing={3} style={{marginTop: '36px'}}>
+      <Grid container spacing={3} style={{marginTop: '28px'}}>
         <Grid item xs={3}>
           <Technologies />
+          <Courses />
           <Languages />
         </Grid>
-        <Grid item xs={6}>
-          <Experience />
-          <Education />
-
-
-        </Grid>
-        <Grid item xs={3}>
-          <Courses />
-          <Interests />
+        <Grid item xs={9}>
+          <Experience /> 
         </Grid>
       </Grid>
-
-
-
     </MainLayout>
   </BrowserRouter>
 );

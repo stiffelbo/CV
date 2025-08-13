@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 //Material UI
 import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import Link from '@material-ui/core/Link';
@@ -21,7 +22,7 @@ import styles from './Contact.module.scss';
 
 
 const Component = (props) => {
-  const { city, zip, phone, email, github, linkedIn, relocation} = props.personal;
+  const { city, address, zip, phone, email, github, linkedIn, relocation} = props.personal;
 
   const linkAvatar = {
     backgroundColor : '#2b64c7',
@@ -83,7 +84,10 @@ const Component = (props) => {
           <Avatar className={styles.avatar} style={avatar}>
             <HomeIcon style={icon}/>
           </Avatar>
-          <Typography variant="subtitle1" className={styles.text}>{`${zip}, ${city}`}</Typography>
+          <Box sx={{display: 'flex', flexDirection: 'column'}}>
+            <Typography variant="subtitle1" className={styles.text}>{`${address},`}</Typography>
+            <Typography variant="subtitle1" className={styles.text}>{`${zip}, ${city}`}, Poland</Typography>
+          </Box>
         </Grid>
         <Grid item xs={8} className={styles.cell}>
           <Avatar className={styles.avatar} style={avatar}>

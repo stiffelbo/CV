@@ -45,7 +45,7 @@ const Component = (props) => {
               </Avatar>
             </ListItemAvatar>
             <ListItemText
-              primary="Doświadczenie Zawodowe"
+              primary="Experience"
             />
           </div>
         </ListItem>

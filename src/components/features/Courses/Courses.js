@@ -12,7 +12,7 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import Link from '@material-ui/core/Link';
 //icons
-import AssignmentIcon from '@material-ui/icons/Assignment';
+import SchoolIcon from '@material-ui/icons/School';
 
 //import styles from './Courses.module.scss';
 
@@ -46,11 +46,11 @@ const Component = (props) => {
           <div style={rowItem}>
             <ListItemAvatar>
               <Avatar style={avatar}>
-                <AssignmentIcon />
+                <SchoolIcon />
               </Avatar>
             </ListItemAvatar>
             <ListItemText
-              primary="Kursy"
+              primary="Education"
             />
           </div>
         </ListItem>
